@@ -43,24 +43,18 @@ const Wrapper = styled.div`
 `;
 
 const FunctionComponent = () => {
-  const [state, setState] = React.useState({
-    name: 'Harry Porter',
-    gender: 'Male',
-    age: 26
-  });
+  const [name] = React.useState('Harry Porter');
+  const [gender] = React.useState('Male');
+  const [age, setAge] = React.useState(26);
   return (
     <Wrapper className="function">
       <h1>Function Component</h1>
       <section>
-        {Object.keys(state).map(key => (
-          <div>
-            {key}: {state[key]}
-          </div>
-        ))}
+        <div>name: {name}</div>
+        <div>gender: {gender}</div>
+        <div>age: {age}</div>
       </section>
-      <button onClick={() => setState({ age: state.age + 1 })}>
-        Getting Older
-      </button>
+      <button onClick={() => setAge(age + 1)}>Getting Older</button>
     </Wrapper>
   );
 };
