@@ -16,13 +16,17 @@ const Div = styled.div`
 `;
 
 const TitleInputer = () => {
-  const [state, setState] = React.useState(() => document.title);
+  const [title, setTitle] = React.useState(() => document.title);
+  const [name, setName] = React.useState('Avicii');
   React.useEffect(() => {
-    document.title = state;
+    console.log('run effect');
+    document.title = title;
   });
+  // }, [title]);
   return (
     <Div>
-      <input value={state} onChange={e => setState(e.target.value)} />
+      <input value={title} onChange={e => setTitle(e.target.value)} />
+      <input value={name} onChange={e => setName(e.target.value)} />
     </Div>
   );
 };
