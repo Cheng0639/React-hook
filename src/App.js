@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import TitleInputer from './TitleInputer';
+
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -13,7 +15,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <h2>Hello World</h2>
+      <TitleInputer />
     </Container>
   );
 }
