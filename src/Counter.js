@@ -30,11 +30,11 @@ const Counter = () => {
   const [count, setCount] = React.useState(0);
   return (
     <Container>
-      <Button className="minus" onClick={() => setCount(count - 1)}>
+      <Button className="minus" onClick={() => setCount(prev => prev - 1)}>
         -
       </Button>
       <Displayer>{count}</Displayer>
-      <Button className="plus" onClick={() => setCount(count + 1)}>
+      <Button className="plus" onClick={() => setCount(prev => prev + 1)}>
         +
       </Button>
     </Container>
