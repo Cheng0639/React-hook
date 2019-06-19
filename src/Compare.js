@@ -58,7 +58,7 @@ const FunctionComponent = () => {
           </div>
         ))}
       </section>
-      <button onClick={() => setState({ age: state.age + 1 })}>
+      <button onClick={() => setState({ ...state, age: state.age + 1 })}>
         Getting Older
       </button>
     </Wrapper>
